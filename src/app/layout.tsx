@@ -1,3 +1,5 @@
+/** Proverbios 16:3 Encomienda a Jehová tus obras, Y tus pensamientos serán afirmados.”*/
+
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
@@ -51,3 +53,4 @@ export default function RootLayout({
     </html>
   );
 }
+
