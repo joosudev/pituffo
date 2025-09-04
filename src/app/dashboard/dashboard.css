@@ -1,0 +1,228 @@
+/* === CONTENEDOR PRINCIPAL === */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* === CARD PRINCIPAL === */
+.dashboard-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 1300px;
+  overflow-x: auto;
+}
+
+.dashboard-card h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+/* === HEADER === */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* === FORMULARIO === */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-grid label {
+  font-weight: bold;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-grid input:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.3);
+  outline: none;
+}
+
+.error {
+  color: #e53e3e;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* === BOTONES === */
+button { font-family: inherit; font-weight: bold; }
+
+.btn-registrar {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #059669;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+.btn-registrar:hover { background-color: #047857; }
+
+.btn-exportar {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-exportar:hover { background-color: #1d4ed8; }
+
+.btn-logout {
+  background-color: #e11d48;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-logout:hover { background-color: #be123c; }
+
+.btn-editar {
+  padding: 0.4rem 0.8rem;
+  background-color: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+  margin-right: 4px;
+}
+.btn-editar:hover { background-color: #16a34a; }
+
+.btn-eliminar {
+  padding: 0.4rem 0.8rem;
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+.btn-eliminar:hover { background-color: #b91c1c; }
+
+/* === TABLAS === */
+.registros-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.registros-table th, .registros-table td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  white-space: nowrap;
+}
+.registros-table th {
+  background-color: #f9fafb;
+  font-weight: bold;
+  color: #111827;
+}
+.registros-table tr:nth-child(even) { background-color: #f3f4f6; }
+.registros-table tr:hover { background-color: #e0f2fe; }
+
+/* === HISTORIAL === */
+.historial-table th { background-color: #fef3c7; }
+.historial-table tr:hover { background-color: #fde68a; }
+
+/* === RESPONSIVE: afina paddings en móviles === */
+@media (max-width: 640px) {
+  .dashboard-card { padding: 1rem; }
+  .dashboard-header h1 { font-size: 1.25rem; }
+  .registros-table { font-size: 0.8rem; }
+}
+
+/* === FILTROS === */
+.filters {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1.5rem 0;
+  background: #f9fafb;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.filters label {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.filters select,
+.filters input[type="date"],
+.filters input[type="week"] {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #111827;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.filters select:hover,
+.filters input[type="date"]:hover,
+.filters input[type="week"]:hover {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.filters select:focus,
+.filters input[type="date"]:focus,
+.filters input[type="week"]:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.25);
+  outline: none;
+}

@@ -1,0 +1,125 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f5f9;
+  padding: 1rem;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.login-card .subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-card .subtitle span {
+  font-weight: 600;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+ width: 100%;
+  padding: 1rem;              /* más espacio dentro del campo */
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  outline: none;
+  transition: border 0.2s;
+  font-size: 1rem;   
+}
+
+.login-card input:focus {
+  border-color: #10b981;
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #059669;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.remember {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.forgot {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+button[type="submit"] {
+ width: 100%;
+  padding: 1.1rem;            /* 🔥 botón más grande */
+  border: none;
+  border-radius: 10px;
+  background-color: #059669;
+  color: white;
+  font-size: 1.05rem;         /* 🔥 texto más grande */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #047857;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 1.5rem;
+}

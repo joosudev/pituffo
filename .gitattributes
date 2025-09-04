@@ -1,0 +1,55 @@
+# ===============================
+# 🔹 Reglas generales
+# ===============================
+
+# Forzar LF para todos los archivos de texto (JavaScript, TypeScript, CSS, HTML, JSON, etc.)
+* text=auto eol=lf
+
+# ===============================
+# 🔹 Código fuente
+# ===============================
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.mjs  text eol=lf
+*.cjs  text eol=lf
+
+# Estilos
+*.css  text eol=lf
+*.scss text eol=lf
+
+# Configuración y metadata
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.md   text eol=lf
+*.env  text eol=lf
+*.toml text eol=lf
+
+# Archivos Next.js especiales
+next.config.* text eol=lf
+tsconfig.*    text eol=lf
+.eslintrc.*   text eol=lf
+
+# ===============================
+# 🔹 Archivos de Windows (mantener CRLF)
+# ===============================
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# ===============================
+# 🔹 Archivos binarios (no tocar)
+# ===============================
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.eot  binary
+*.mp4  binary
+*.mp3  binary
