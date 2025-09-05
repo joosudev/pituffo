@@ -1,16 +1,16 @@
 import clientPromise from "@/app/lib/mongodb";
 import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
 
 export async function GET() {
-  const sessionCookie = await cookies();
-  const session = sessionCookie.get("session")?.value;
-  if (session !== "ok") return NextResponse.json({ ok: false }, { status: 401 });
+  try {
+    const client = await clientPromise;
+    const db = client.db("gasolinera");
+    const historial = db.collection("historial");
 
-  const client = await clientPromise;
-  const db = client.db("gasolinera");
-  const col = db.collection("historial");
-
-  const data = await col.find().sort({ eliminadoEn: -1 }).toArray();
-  return NextResponse.json({ ok: true, data });
+    const docs = await historial.find().toArray();
+    return NextResponse.json({ ok: true, data: docs });
+  } catch (e) {
+    console.error("❌ Error GET /api/historial:", e);
+    return NextResponse.json({ ok: false, message: "Error en servidor" }, { status: 500 });
+  }
 }

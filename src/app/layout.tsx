@@ -1,8 +1,7 @@
-/** Proverbios 16:3 Encomienda a Jehová tus obras, Y tus pensamientos serán afirmados.”*/
-
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import SWUpdater from "@/app/components/SWUpdater";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,8 +17,8 @@ export const metadata: Metadata = {
   title: "Sistema Gasolinera",
   description: "Control de despachos y stock del camión",
   icons: {
-    icon: "/favicon.ico", // ✅ Icono en la pestaña
-    apple: "/image/192x192.png", // ✅ Icono para iOS/Apple
+    icon: "/favicon.ico",
+    apple: "/image/192x192.png",
   },
 };
 
@@ -31,15 +30,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* ✅ PWA manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#1e40af" />
-
-        {/* ✅ Iconos para pestaña y móviles */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-
-        {/* ✅ Configuración PWA */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -48,9 +42,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${robotoMono.variable}`}>
+        <SWUpdater />
         {children}
       </body>
     </html>
   );
 }
 
+
+
+/** Proverbios 16:3 Encomienda a Jehová tus obras, Y tus pensamientos serán afirmados.” */

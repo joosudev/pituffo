@@ -1,10 +1,10 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI!;
-if (!uri) throw new Error("❌ Debes definir MONGODB_URI en .env.local");
+const uri = process.env.MONGODB_URI;
+if (!uri) throw new Error("❌ Debes definir MONGODB_URI en .env.local o en Vercel");
 
 declare global {
-  // Para evitar múltiples conexiones en dev (HMR)
+  // Para evitar múltiples conexiones en dev (HMR de Next.js)
   var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
 
