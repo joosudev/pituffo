@@ -1,5 +1,5 @@
 {
-  "name": "Sistema Gasolinera Pitufo",
+  "name": "PitufoApp",
   "short_name": "PitufoApp",
   "description": "Sistema de gestión de control de combustible con soporte offline.",
   "start_url": "/",
